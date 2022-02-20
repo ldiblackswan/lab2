@@ -9,5 +9,7 @@ SOURCES += \
         main.cpp
 
 HEADERS += \
+    CPlusPlusCodeGenerator.h \
     CPlusPlusUnits.h \
+    ICodeGenerator.h \
     Units.h
