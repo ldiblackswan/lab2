@@ -4,4 +4,10 @@ CONFIG -= app_bundle
 CONFIG -= qt
 
 SOURCES += \
+        CPlusPlusUnits.cpp \
+        Units.cpp \
         main.cpp
+
+HEADERS += \
+    CPlusPlusUnits.h \
+    Units.h
