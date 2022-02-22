@@ -12,7 +12,7 @@ std::string CPlusPlusClassUnit::compile(unsigned int level) const
     std::string result = generateShift(level) + "class " + m_name + " ";
 
     //если установлен бит "final"
-    if(m_modifier & FINAL)
+    if (m_modifier & FINAL)
     {
         result += "final ";
     }
@@ -51,23 +51,18 @@ CPlusPlusMethodUnit::~CPlusPlusMethodUnit()
 std::string CPlusPlusMethodUnit::compile(unsigned int level) const
 {
     std::string result = generateShift(level);
-
-    //если установлен бит "static"
     if (m_flags & STATIC)
     {
         result += "static ";
     }
-    //если установлен бит "virtual"
     else if (m_flags & VIRTUAL)
     {
         result += "virtual ";
     }
-    //одновременно не может быть и static и virtual
-
     result += m_returnType + " ";
     result += m_name + "()";
 
-    if(m_flags & FINAL)
+    if (m_flags & FINAL && !(m_flags & STATIC))
     {
         result += "final ";
     }

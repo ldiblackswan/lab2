@@ -13,7 +13,9 @@ SOURCES += \
 HEADERS += \
     CPlusPlusCodeGenerator.h \
     CPlusPlusUnits.h \
+    CSharpCodeGenerator.h \
     CSharpUnits.h \
     ICodeGenerator.h \
+    JavaCodeGenerator.h \
     JavaUnits.h \
     Units.h

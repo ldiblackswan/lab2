@@ -2,6 +2,8 @@
 #include "CPlusPlusUnits.h"
 #include "ICodeGenerator.h"
 #include "CPlusPlusCodeGenerator.h"
+#include "CSharpCodeGenerator.h"
+#include "JavaCodeGenerator.h"
 
 std::string generateCode(const std::shared_ptr<ICodeGenerator>& generator)
 {
@@ -37,5 +39,7 @@ std::string generateCode(const std::shared_ptr<ICodeGenerator>& generator)
 int main()
 {
     std::cout << generateCode(std::make_shared<CPlusPlusCodeGenerator>()) << std::endl;
+    std::cout << generateCode(std::make_shared<CSharpCodeGenerator>()) << std::endl;
+    std::cout << generateCode(std::make_shared<JavaCodeGenerator>()) << std::endl;
     return 0;
 }

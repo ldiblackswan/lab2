@@ -24,12 +24,12 @@ public:
     std::string compile(unsigned int level = 0) const;
 };
 
-class JavaPrintUnit : public PrintOperatorUnit
+class JavaPrintOperatorUnit : public PrintOperatorUnit
 {
 public:
 
-    explicit JavaPrintUnit(const std::string& text);
-    ~JavaPrintUnit() {}
+    explicit JavaPrintOperatorUnit(const std::string& text);
+    ~JavaPrintOperatorUnit() {}
 
     std::string compile(unsigned int level = 0) const;
 };
